@@ -1,0 +1,12 @@
+app:
+  name: qd_visualization
+grpc:
+  host: localhost
+  port: 50051
+openia:
+  key: key
+azure:
+  computer_vision:
+    endpoint: https://endpoint.com/
+    key: key
+    content_type: image/*

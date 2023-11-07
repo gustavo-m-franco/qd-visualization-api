@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package src.pb;
+
+service VisualizationService {
+    rpc ProcessImageAndPrompt (ImagePromptRequest) returns (ImagePromptResponse);
+}
+
+message ImagePromptRequest {
+    string jwt_token = 1;
+    bytes image_data = 2;
+    string prompt = 3;
+}
+
+message ImagePromptResponse {
+    string response_to_prompt = 1;
+}

@@ -1,0 +1,31 @@
+[style]
+# Start with PEP 8 style recommendations and maximum line width
+based_on_style = pep8
+column_limit = 80
+
+# Indentation
+indent_width = 4
+use_tabs = False
+
+# Continuation alignment style. Possible values are:
+# PEP8: The next line is aligned relative to the end of the opening parenthesis.
+# FIXED: Continuations are aligned to a particular column.
+continuation_align_style = SPACE
+
+# Place the closing brace on its own line.
+dedent_closing_brackets = True
+
+# Do not split consecutive brackets. Only relevant when dedent_closing_brackets is set.
+coalesce_brackets = True
+
+# Insert a space between the end of a comma and the following element.
+space_between_ending_comma_and_closing_bracket = True
+
+# Split before a logical operator.
+split_before_logical_operator = True
+
+# Join short lines into one line. E.g., single line 'if' statements.
+join_multiple_lines = True
+
+# Don't split before the first argument of a function.
+split_before_first_argument = False

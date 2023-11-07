@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "==0.28.1"
+pyyaml = "==6.0.1"
+requests = "==2.31.0"
+grpcio = "==1.59.0"
+grpcio-tools = "==1.59.0"
+protobuf = "*"
+
+[dev-packages]
+yapf = "==0.40.2"
+pre-commit = "==3.5.0"
+pylint = "==3.0.2"
+
+[requires]
+python_version = "3.9"
+python_full_version = "3.9.18"
