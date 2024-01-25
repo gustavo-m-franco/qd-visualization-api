@@ -42,4 +42,5 @@ def serve(
     )
     server.add_insecure_port(f"{host}:{port}")
     server.start()
+    print(f"Server started at {host}:{port}")
     server.wait_for_termination()

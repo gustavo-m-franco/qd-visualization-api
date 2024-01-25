@@ -13,14 +13,14 @@ class AzureComputerVisionTextExtractor(TextExtractor):
     def extract_text_from_image_file(
         self, image_data: bytes, content_type: str
     ) -> Union[str, None]:
-        url = f'{self.endpoint}/computervision/imageanalysis:analyze'
+        url = f'{self.endpoint}computervision/imageanalysis:analyze'
         headers = {
             'Content-Type': content_type,
             'Ocp-Apim-Subscription-Key': self.subscription_key
         }
 
         params = {
-            'features': 'caption,read',
+            'features': 'read',
             'model-version': 'latest',
             'language': 'en',
             'api-version': '2023-04-01-preview'

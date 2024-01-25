@@ -1,16 +1,17 @@
 import sys
 import os
 import grpc
-from src.pb import visualization_pb2, visualization_pb2_grpc
 
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 )
 
 
+from src.pb import visualization_pb2, visualization_pb2_grpc
+
 def run():
     with grpc.insecure_channel('localhost:50051') as channel:
-        image_path = "/Users/GFC01/Desktop/AzureComputerVisionTextExtractor.png"
+        image_path = "./assets/code_example.png"
         with open(image_path, 'rb') as image_file:
             image_data = image_file.read()
         propmpt = "\n\n\n\nRefactor the code provided above..."
