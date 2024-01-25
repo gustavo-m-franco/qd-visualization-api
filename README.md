@@ -47,13 +47,10 @@ pipenv run pip main.py
 ```
 
 ## GRPC
-To generate the protobuf code you need to run protoc in the `/pb` folder:
+To generate the protobuf code you need to run the following script in the `/pb` folder (make sure pyenv virtual environment is activated and the dependecies are installed):
 ```bash
-cd pb
-buf generate
-python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. visualization.proto
-mv visualization_pb2_grpc.py ../src/pb/
-mv visualization_pb2.py ../src/pb/
+pipenv shell
+./scripts/generate_grpc_code.sh
 ```
 Once created the files, update the imports in `visualization_pb2_grpc.py` from `import visualization_pb2 as visualization__pb2` to `from . import visualization_pb2 as visualization__pb2`. If not it will give out import errors.
 
